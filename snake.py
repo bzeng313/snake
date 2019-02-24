@@ -9,7 +9,7 @@ window.keypad(True)
 window.timeout(100)
 
 snake = [
-			(screen_h/2, screen_w/2)
+			(screen_h//2, screen_w//2)
 		]
 
 while True:
@@ -55,7 +55,7 @@ while True:
 	
 	if snake[0] == food:
 		snake.append(snake_tail)
- 		score += 100
+		score += 100
 		while food in snake:
 			food = (random.randint(0, screen_h - 2), random.randint(0, screen_w - 1))
 		window.addch(food[0], food[1], '*')	
